@@ -3,7 +3,6 @@ test/
 scripts/
 img_render/
 spider/
-word_bank/
 .pdm-python
 autorun.sh
 main.py

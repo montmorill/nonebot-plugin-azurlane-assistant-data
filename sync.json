@@ -1,8 +1,0 @@
-{
-    "default": [
-        "azurlane/pool.json",
-        "azurlane/ship.json",
-        "word_bank/default.json",
-        "azurlane/equip/*"
-    ]
-}
