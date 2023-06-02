@@ -1,4 +1,16 @@
 test/
+.github/
+scripts/
+img_render/
+spider/
+word_bank/
+.pdm-python
+autorun.sh
+main.py
+pdm.lock
+pyproject.toml
+README.md
+todo.md
 
 ### venv template
 # Virtualenv

@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional
+from typing import List, Optional, Dict
 
 class ShipAttrs(BaseModel):
     durability: int                 # 耐久
@@ -26,7 +26,8 @@ class Ship(BaseModel):
         alias: 别名  
         wiki_page: bwiki页面  
         remote_icon_path: 远程图标路径  
-        local_icon_path: 本地图标路径  
+        local_icon_path: 本地图标路径
+        skins_url: 皮肤
         attrs: 属性  
     """
     name: str               # 船名
@@ -35,4 +36,5 @@ class Ship(BaseModel):
     wiki_page: str = Field(None, description="bwiki页面")
     remote_icon_path: str = Field(None, description="远程图标路径")
     local_icon_path: str = Field(None, description="本地图标路径")
+    skins_url: Dict[str, str]
     #attrs: ShipAttrs        # TODO 属性

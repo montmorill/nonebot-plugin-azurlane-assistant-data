@@ -43,19 +43,24 @@ def parse(resp: Response) -> dict | str | bytes:
 
 def get_content(
         url: str,
-        timeout: int = 10
+        timeout: int = 10,
+        *args,
+        range: int = None,
 ) -> dict | str | bytes:
     """
     获取页面
 
     :param url:链接
     :param timeout:超时时间
+    :param range:范围
     :return:页面响应
     """
     HEADERS = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
                       "Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63"
     }
+    if range:
+        HEADERS["Range"] = f"bytes=0-{range}"
     from httpx import get
     resp = get(url, headers=HEADERS, timeout=timeout)
     return parse(resp)

@@ -2,11 +2,11 @@ name: Python Autorun
 
 on:
   push:
-    branches: [ "main", "test_func"]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: "0 8 * * *"
+    - cron: "0 20 * * 4"
   workflow_dispatch:
 
 permissions: write-all
